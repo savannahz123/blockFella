@@ -12,13 +12,11 @@ class App extends React.Component {
   async getDataFromAPI() {
     console.log("scraping...");
     
-    await axios.get("http://localhost:3001/api/scrape")
+    axios.get("http://localhost:3001/api/scrape")
     .then((res) => (this.setState({apiData : res})))
     .catch(function(err) {
       console.log(err);
     })
-
-    console.log(this.state);
   }
 
   // call API when the component is mounted
