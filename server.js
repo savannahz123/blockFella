@@ -2,14 +2,19 @@
 let express = require("express");                       // express server
 let logger = require("morgan");                         // logger
 let mongoose = require("mongoose");                     // mongoose for mongodb
+let cors = require("cors");                             // cors
+console.log(cors);
 
 // app PORT
-var PORT = process.env.PORT || 8080;
+var PORT = process.env.PORT || 3001;
 
 // TODO: add connection to mongodb server via mongoose
 
 // Initialize Express
 let app = express();
+
+// Use CORS to enable communication between ReactJS server and express server
+app.use(cors());
 
 // Use morgan logger for logging requests
 app.use(logger("dev"));
