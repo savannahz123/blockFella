@@ -9,7 +9,7 @@ class App extends React.Component {
   }
 
   // a demo function to get data from server api
-  async getDataFromAPI() {
+  getDataFromAPI() {
     console.log("scraping...");
     
     axios.get("http://localhost:3001/api/scrape")
