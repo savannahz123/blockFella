@@ -3,7 +3,6 @@ let express = require("express");                       // express server
 let logger = require("morgan");                         // logger
 let mongoose = require("mongoose");                     // mongoose for mongodb
 let cors = require("cors");                             // cors
-console.log(cors);
 
 // app PORT
 var PORT = process.env.PORT || 3001;
